@@ -593,7 +593,11 @@ noscript {
     align-items: flex-end
 }
 
-#name,
+#name {
+    font-size: 8rem;
+    width: fit-content
+}
+
 #work {
     font-size: 8rem;
     width: fit-content
