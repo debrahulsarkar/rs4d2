@@ -382,38 +382,38 @@ What are you doing here?! you sneaky developer...
                   </a>
                 </div>
               </div>
+                        <!-- PROJECT CARD -->
               <div class="image-div" onclick="openProject('ww2')">
-               <video class="project-video" autoplay muted loop playsinline>
-                 <source src="src/videos/ww2.mp4" type="video/mp4">
-               </video>
-               </div>
-           
-                <div id="project-modal" class="modal">
-                     <span onclick="closeModal()" class="close">&times;</span>
-                      <div class="modal-content" id="modal-content"></div>
-                </div>
-                <script>
-                    function openProject(project) {
-                    const modal = document.getElementById("project-modal");
-                    const content = document.getElementById("modal-content");
+              <video class="project-video" autoplay muted loop playsinline>
+              <source src="src/videos/ww2.mp4" type="video/mp4">
+          </video>
+          </div>
 
-                    if (project === "ww2") {
-                    content.innerHTML = `
-                    <img src="src/renders/ww2-1.png">
-                    <img src="src/renders/ww2-2.png">
-                    <img src="src/renders/ww2-3.png">
-                  `;
-              }
+                <!-- MODAL (KEEP THIS AT BOTTOM OF BODY) -->
+           <div id="project-modal" class="modal">
+           <span onclick="closeModal()" class="close">&times;</span>
+           <div class="modal-content" id="modal-content"></div>
+          </div>
+              <script>
+            function openProject(project) {
+            const modal = document.getElementById("project-modal");
+            const content = document.getElementById("modal-content");
 
-             modal.style.display = "block";
-            }
-
-           function closeModal() {
-                document.getElementById("project-modal").style.display = "none";
+           if (project === "ww2") {
+            content.innerHTML = `
+                <img src="src/renders/ww2-1.png">
+                <img src="src/renders/ww2-2.png">
+                <img src="src/renders/ww2-3.png">
+             `;
            }
-           </script> 
-               </body>
-              
+
+           modal.style.display = "block";
+          }
+
+          function closeModal() {
+          document.getElementById("project-modal").style.display = "none";
+         }
+         </script>
               </div>
             </div>
           </div>
