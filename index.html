@@ -437,8 +437,38 @@ What are you doing here?! you sneaky developer...
                   </a>
                 </div>
               </div>
-              <div class="image-div">
-                <img src="src/webp/stopscams-preview.webp" alt="stopscams website preview image" />
+                       <!-- PROJECT CARD -->
+              <div class="image-div" onclick="openProject('ww2')">
+              <video class="project-video" autoplay muted loop playsinline>
+              <source src="src/video/ww2.mp4" type="video/mp4">
+          </video>
+          </div>
+
+                <!-- MODAL (KEEP THIS AT BOTTOM OF BODY) -->
+           <div id="project-modal" class="modal">
+           <span onclick="closeModal()" class="close">&times;</span>
+           <div class="modal-content" id="modal-content"></div>
+          </div>
+              <script>
+            function openProject(project) {
+            const modal = document.getElementById("project-modal");
+            const content = document.getElementById("modal-content");
+
+           if (project === "ww2") {
+            content.innerHTML = `
+                <img src="src/renders/1452.png">
+                <img src="src/renders/1453.png">
+                <img src="src/renders/1454.png">
+             `;
+           }
+
+           modal.style.display = "block";
+          }
+
+          function closeModal() {
+          document.getElementById("project-modal").style.display = "none";
+         }
+         </script>
               </div>
             </div>
           </div>
