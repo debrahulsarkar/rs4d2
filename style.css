@@ -2084,3 +2084,68 @@ footer {
 .close:hover {
   opacity: 0.6;
 }
+/* ===== PROJECT SECTION FIX ===== */
+
+.project-boxes-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center cards */
+  gap: 50px;
+  width: 100%;
+}
+
+/* REMOVE wrapper influence */
+.project-box-wrapper {
+  width: 100%;
+  display: block;
+}
+
+/* MAIN PROJECT CARD */
+.project-box {
+  width: 100%;              /* full width */
+  max-width: 900px;         /* prevent stretching */
+  display: flex;
+  flex-direction: row;      /* text left, video right */
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px;
+  border: 1px solid var(--tech-stack-box-border-color);
+  overflow: hidden;
+}
+
+/* LEFT TEXT SIDE */
+.info-div {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* RIGHT VIDEO SIDE */
+.image-div {
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+}
+
+/* VIDEO FIX */
+.project-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* ===== OPTIONAL (better mobile) ===== */
+@media screen and (max-width: 768px) {
+  .project-box {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .info-div,
+  .image-div {
+    width: 100%;
+  }
+}
