@@ -2084,3 +2084,18 @@ footer {
 .close:hover {
   opacity: 0.6;
 }
+.project-boxes-div {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.project-boxes-div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+.project-boxes-div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
