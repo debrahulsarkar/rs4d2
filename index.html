@@ -473,6 +473,66 @@ What are you doing here?! you sneaky developer...
             </div>
           </div>
           <!-- --------------------- -->
+     <div class="project-box">...</div>
+      <div class="project-box">
+
+  <div class="info-div">
+    <img src="src/renders/icon.png" class="faviconforProject" />
+
+    <article class="ProjectHeading">Project Title</article>
+
+    <p class="ProjectDescription">
+      Your description here
+    </p>
+
+    <div class="project-buttons">
+      <a href="javascript:void(0);" onclick="openProject('p3')" class="cta">
+        <span>Live view</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="image-div" onclick="openProject('p3')">
+    <video class="project-video" autoplay muted loop playsinline>
+      <source src="src/video/p3.mp4" type="video/mp4">
+    </video>
+  </div>
+
+</div>
+      <!-- GLOBAL MODAL -->
+<div id="project-modal" class="modal">
+  <span onclick="closeModal()" class="close">&times;</span>
+  <div class="modal-content" id="modal-content"></div>
+</div>
+
+<script>
+function openProject(project) {
+  const modal = document.getElementById("project-modal");
+  const content = document.getElementById("modal-content");
+
+  if (project === "ww2") {
+    content.innerHTML = `
+      <img src="src/renders/1452.png">
+      <img src="src/renders/1453.png">
+      <img src="src/renders/1454.png">
+    `;
+  }
+
+  if (project === "p2") {
+    content.innerHTML = `
+      <img src="src/renders/p2-1.png">
+      <img src="src/renders/p2-2.png">
+      <img src="src/renders/p2-3.png">
+    `;
+  }
+
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("project-modal").style.display = "none";
+}
+</script>
       
           <!-- --------------------- -->
         </div>
