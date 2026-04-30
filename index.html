@@ -485,6 +485,12 @@ function openProjectModal(projectTitle) {
   modal.classList.add("active");
   modal.setAttribute("aria-hidden", "false");
 }
+
+function closeProjectModal() {
+  const modal = document.getElementById("project-modal");
+  modal.classList.remove("active");
+  modal.setAttribute("aria-hidden", "true");
+}
 </script>
   </main>
   <!-- main ends here -->
