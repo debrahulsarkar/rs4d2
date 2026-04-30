@@ -419,22 +419,73 @@ What are you doing here?! you sneaky developer...
       </div>
     </section>
     <script>
-     function openProjectModal(projectTitle) {
-       const modal = document.getElementById("project-modal");
-       const content = document.getElementById("project-modal-content");
-        content.innerHTML = `
-          <h3 class="project-modal-title">${projectTitle}</h3>
-          <p class="project-modal-note">Add image renders and video here.</p>
-        `;
-        modal.classList.add("active");
-        modal.setAttribute("aria-hidden", "false");
-      }
-       function closeProjectModal() {
-        const modal = document.getElementById("project-modal");
-        modal.classList.remove("active");
-        modal.setAttribute("aria-hidden", "true");
-      }
-    </script>
+function openProjectModal(projectTitle) {
+  const modal = document.getElementById("project-modal");
+  const content = document.getElementById("project-modal-content");
+
+  const projectMedia = {
+    "Project 1 Title": {
+      images: [
+        "src/renders/1452.png",
+        "assets/projects/project1/photo2.jpg"
+      ],
+      videos: [
+        "src/video/ww2.mp4"
+      ]
+    },
+    "Project 2 Title": {
+      images: [
+        "assets/projects/project2/screen1.jpg"
+      ],
+      videos: [
+        "assets/projects/project2/walkthrough.mp4"
+      ]
+    },
+    "Project 3 Title": {
+      images: [
+        "assets/projects/project2/screen1.jpg"
+      ],
+      videos: [
+        "assets/projects/project2/walkthrough.mp4"
+      ]
+    },
+    "Project 4 Title": {
+      images: [
+        "assets/projects/project2/screen1.jpg"
+      ],
+      videos: [
+        "assets/projects/project2/walkthrough.mp4"
+      ]
+    },
+    "Project 5 Title": {
+      images: [
+        "assets/projects/project2/screen1.jpg"
+      ],
+      videos: [
+        "assets/projects/project2/walkthrough.mp4"
+      ]
+    },
+  };
+
+  const media = projectMedia[projectTitle] || { images: [], videos: [] };
+
+  const imagesHtml = media.images
+    .map(src => `<img src="${src}" alt="${projectTitle} image" class="project-modal-image">`)
+    .join("");
+
+  const videosHtml = media.videos
+    .map(src => `<video controls class="project-modal-video"><source src="${src}" type="video/mp4"></video>`)
+    .join("");
+
+  content.innerHTML = `
+    <h3 class="project-modal-title">${projectTitle}</h3>
+    <div class="project-modal-media">${imagesHtml}${videosHtml}</div>
+  `;
+
+  modal.classList.add("active");
+  modal.setAttribute("aria-hidden", "false");
+}
+</script>
   </main>
   <!-- main ends here -->
 
