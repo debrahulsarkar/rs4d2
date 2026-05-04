@@ -1913,11 +1913,22 @@ footer {
     }
 
     .landing-page-container {
-        height: 85vh
+        height: auto;
+        min-height: calc(100vh - 70px);
+        padding: 110px 0 50px
     }
 
     .text-content {
-        justify-content: flex-start
+       justify-content: flex-start;
+        width: 88%
+    }
+
+    #name,
+    #work {
+        width: 100%;
+        flex-wrap: wrap;
+        font-size: clamp(3.8rem, 12vw, 5.2rem);
+        line-height: 1.05
     }
 
     .project-box {
@@ -2355,5 +2366,33 @@ footer {
 
   .testimonial-preview-image {
     width: 100%;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .testimonial-section-container {
+    padding: 0 0 90px;
+  }
+
+  .testimonial-list {
+    gap: 1.2rem;
+  }
+
+  .testimonial-card {
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+
+  .testimonial-preview-image {
+    min-height: 0;
+    max-height: 220px;
+    width: 100%;
+    height: auto;
+  }
+
+  .testimonial-quote {
+    font-size: 1.55rem;
+    line-height: 1.5;
   }
 }
