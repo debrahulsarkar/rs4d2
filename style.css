@@ -573,9 +573,12 @@ noscript {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    background-image: linear-gradient(rgba(10, 10, 16, .62), rgba(10, 10, 16, .62)), url("src/renders/1587.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
 }
-
 .text-content {
     display: flex;
     flex-direction: column;
