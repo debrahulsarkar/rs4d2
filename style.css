@@ -2333,6 +2333,12 @@ footer {
   font-size: 0.95rem;
 }
 
+.testimonial-country {
+  margin: 0.25rem 0 0;
+  color: #a9a9a9;
+  font-size: 0.9rem;
+}
+
 .testimonial-preview-image {
   width: min(240px, 36vw);
   min-height: 160px;
